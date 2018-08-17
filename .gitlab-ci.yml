@@ -1,0 +1,6 @@
+deploy:jdk8:
+  script:
+    - 'mvn -U clean compile deploy --settings /root/.m2/settings.xml'
+  only:
+    - master
+  image: maven:3.5.4-jdk-8
